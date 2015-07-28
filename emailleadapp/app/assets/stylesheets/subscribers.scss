@@ -1,0 +1,48 @@
+// Place all the styles related to the subscribers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.subscribe-form {
+	label {
+		font: {
+			size: .75em;
+		}
+		text-transform: uppercase;
+	}
+	input[type="text"] {
+		width: 100%;
+		border-radius: 2px;
+		border: #ccc 1px solid;
+		font: {
+			size: 1.25em;
+		}
+		padding: 0.46875em;
+	}
+}
+.page-bg {
+	background: {
+		image: url('bg3.jpg');
+		size: cover;
+	}
+	width: 100%;
+	height: 100%;
+}
+
+.subscribe-container {
+	h1 {
+		font: {
+			size: 6em;
+			weight: 100;
+		}
+		line-height: 115.2px;
+		color: #FA464C;
+		text-shadow: 0 0 4px #FFF;
+	}
+}
+.logo {
+	background: {
+		image: url('logo.png');
+	}
+	width: 150px;
+	height: 150px;
+	margin-top: 64.32px;
+}

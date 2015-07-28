@@ -1,0 +1,19 @@
+<div class="page-bg">
+	<div class="row">
+		<div class="small-12 large-4 columns">
+			<div class="logo"></div>
+		</div>
+		<div class="small-12 large-8 columns">
+			<div class="subscribe-container">
+				<h1>Recipes delivered to your inbox daily.</h1>
+				<%= form_for @subscriber, :html => {:class => 'subscribe-form'} do |f| %>
+					<p>
+					<%= f.label :email, 'Enter your best email' %><br>
+					<%= f.text_field :email, placeholder: 'ex: bert@sstreet.com' %>
+					</p>
+					<%= f.submit "Subscribe", class: "button radius" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
