@@ -11,8 +11,8 @@ class SubscribersController < ApplicationController
 		@subscriber = Subscriber.new(subscriber_params)
 		
 		if @subscriber.save
-			session[:modal] = true
-    		redirect_to root_path
+			#session[:modal] = true
+    		redirect_to subscribers_url
 		else
 			render 'new'
 		end
