@@ -1,4 +1,7 @@
 class SubscribersController < ApplicationController
+	def index
+		
+	end
 
 	def new
 		@subscriber = Subscriber.new
@@ -6,15 +9,17 @@ class SubscribersController < ApplicationController
 
 	def create
 		@subscriber = Subscriber.new(subscriber_params)
+		
 		if @subscriber.save
-			redirect_to @subscriber, alert: "User created successfully."
-    	else
-        	render :new, alert: "Error creating user."
-    	end
+			session[:modal] = true
+    		redirect_to root_path
+		else
+			render 'new'
+		end
 	end
 
+	private
 	def subscriber_params
 		params.require(:subscriber).permit(:email)
 	end
-
 end

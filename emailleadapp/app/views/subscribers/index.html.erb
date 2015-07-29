@@ -5,14 +5,7 @@
 		</div>
 		<div class="large-8 columns">
 			<div class="subscribe-container">
-				<h1>Fresh <span>recipes</span> delivered to your inbox daily.</h1>
-				<%= form_for @subscriber, :html => {:class => 'subscribe-form'} do |f| %>
-					<%= f.label :email, 'Enter your best email' %>
-					<%= f.text_field :email, placeholder: 'ex: bert@sstreet.com' %>
-					<%= button_tag(type: 'submit', class: "button radius") do %>
- 						<span>Get chef.ly (<small>&nbsp;FREE&nbsp;</small>)</span>
-					<% end %>
-				<% end %>
+				
 			</div>
 			<div class="social-links">
 				<ul class="inline-list">
@@ -25,6 +18,3 @@
 		</div>
 	</div>
 </div>
-<% if session[:modal] == true %>
-	<%= render :partial => 'layouts/modal'%>
-<% end %>
