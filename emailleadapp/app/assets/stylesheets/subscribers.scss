@@ -75,6 +75,16 @@
 		text-decoration: underline;
 	}
 }
+.modal-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.75; 
+}
 .modal-dialog {
 	display: none;
 	position: absolute;
@@ -97,13 +107,14 @@
 .modal-container {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
-	border: #eee 1px solid;
+	border: #ccc 1px solid;
 	border-radius: 2px;
 	position: relative;
 	padding: 0.9375em;
 	p {
 		font: {
 			size: 1.125em;
+			weight: 300;
 		}
 	}
 	.social-links {

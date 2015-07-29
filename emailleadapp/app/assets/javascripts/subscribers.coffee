@@ -6,10 +6,10 @@
 $(document).ready ->
 	$("#new_subscriber").on("ajax:success", (e, data, status, xhr) ->
 		$("#subscriber_email").val("")
-		$(".modal-dialog").fadeIn()
+		$(".modal-dialog, .modal-overlay").fadeIn()
 	).on "ajax:error", (e, xhr, status, error) ->
 		$("#subscriber_email").css("background:red")
 
 	$(".modal-dialog").find(".close").on "click", (event) ->
-		$(this).parents(".modal-dialog").fadeOut()
+		$(".modal-dialog, .modal-overlay").fadeOut()
 		event.preventDefault()
